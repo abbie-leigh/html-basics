@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title! I.E. Browser Title</title>
+  <style>
+    .box {
+      background-color: rgb(209, 244, 255);
+      padding: 10px;
+      margin: 5px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .inline {
+      background-color: rgb(201, 255, 201);
+      padding: 5px;
+      margin: 5px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .example-text {
+      background-color: rgb(253, 255, 201);
+      padding: 5px;
+      margin: 5px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .header {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .paragraph {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    td {
+      border: 1px solid #ffbdbd;
+      padding: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="header">Cat!</h1>
+  <p class="paragraph">Credit: <a href="https://i.redd.it/wj1z0hehh3651.jpg">https://i.redd.it/wj1z0hehh3651.jpg</a></p>
+  <img src="images/cat-rolly-polly.jpg" width="300">
+  <br>
+  <br>
+  <hr>
+
+  <h1 class="header">Headings! (This is heading 1)</h1>
+  <h2 class="header">&lt;h2&gt;Heading 2&lt;/h2&gt;</h2>
+  <h3 class="header">&lt;h3&gt;Heading 3&lt;/h3&gt;</h3>
+  <h4 class="header">&lt;h4&gt;Heading 4&lt;/h4&gt;</h4>
+  <h5 class="header">&lt;h5&gt;Heading 5&lt;/h5&gt;</h5>
+  <h6 class="header">&lt;h6&gt;Heading 6&lt;/h6&gt;</h6>
+  <hr>
+
+  <h1 class="header">Divs! (Block-level)</h1>
+  <div class="box">This is a div</div>
+  <div class="box">Another div below</div>
+  <br>
+  <hr>
+
+  <h1 class="header">Paragraphs & Spans! (Inline)</h1>
+  <p class="paragraph">This is a
+    <span class="inline">span</span>in a paragraph:
+    <span class="example-text">&lt;span&gt;span&lt;/span&gt;</span>
+  </p>
+  <p class="paragraph">
+    This is <span class="inline">two</span>
+    <span class="inline">spans</span>in a paragraph:
+    <span class="example-text">
+      &lt;span&gt;two&lt;/span&gt;&lt;span&gt;spans&lt;/span&gt;
+    </span>
+  </p>
+  <p class="paragraph">
+    This is <em>italicized text</em> in a paragraph:
+    <span class="example-text">
+      &lt;em&gt;italicized text&lt;/em&gt;
+    </span>
+  </p>
+  <p class="paragraph">
+    This is <strong>bold text</strong> in a paragraph:
+    <span class="example-text">&lt;strong&gt;bold text&lt;/strong&gt;</span>
+  </p>
+  <br>
+  <hr>
+
+  <h1 class="header">Links!</h1>
+  <p class="paragraph">
+    This is a <a href="https://www.google.com">link</a> which opens Google in the current tab (default):
+    <br><br>
+    <span class="example-text">&lt;a href="https://www.google.com"&gt;link&lt;/a&gt;</span>
+  </p>
+  <p class="paragraph">
+    This is a <a href="https://www.google.com" target="_blank">link</a> which opens Google in a new tab (default):
+    <br><br>
+    <span class="example-text">&lt;a href="https://www.google.com" target="_blank"&gt;link&lt;/a&gt;</span>
+  </p>
+  <br>
+  <hr>
+
+  <h1 class="header">Lists!</h1>
+  <ul class="paragraph">
+    <li>Apple</li>
+    <li>Mango</li>
+    <li>Pineapple</li>
+  </ul>
+
+  <ol class="paragraph">
+    <li>Apple</li>
+    <li>Mango</li>
+    <li>Grapes</li>
+  </ol>
+
+  <table>
+    <caption>Monthly Sales Report</caption>
+    <thead>
+      <tr>
+        <th>Month</th>
+        <th>Sales ($)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>January</td>
+        <td>12,000</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>15,500</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <hr>
+
+  <h1>Forms!</h1>
+  <hr>
+  <h2>Register</h2>
+  <form action="/register" method="post">
+    <!-- Username -->
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username" minlength="4" required><br><br>
+
+    <!-- Password -->
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" minlength="6" required><br><br>
+
+    <!-- Gender -->
+    <label>Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+
+    <!-- Interests -->
+    <label>Interests:</label><br>
+    <input type="checkbox" id="coding" name="interests" value="coding">
+    <label for="coding">Coding</label><br>
+    <input type="checkbox" id="music" name="interests" value="music">
+    <label for="music">Music</label><br><br>
+
+    <!-- Submit -->
+    <input type="submit" value="Sign Up">
+  </form>
+  <br>
+  <hr>
+
+  <h2>Place Your Order</h2>
+  <form action="/order" method="post">
+    <!-- Product -->
+    <label for="product">Choose a product:</label><br>
+    <select id="product" name="product" required>
+      <option value="">--Select--</option>
+      <option value="laptop">Laptop</option>
+      <option value="phone">Phone</option>
+      <option value="tablet">Tablet</option>
+    </select><br><br>
+
+    <!-- Quantity -->
+    <label for="quantity">Quantity:</label><br>
+    <input type="number" id="quantity" name="quantity" min="1" max="10" required><br><br>
+
+    <!-- Submit -->
+    <input type="submit" value="Order Now">
+  </form>
+  <br>
+  <hr>
+
+
+  <p>We are going to meet up at <time>10:00 am to 12:00pm</time>
+  </p>
+
+</body>
+
+</html>
